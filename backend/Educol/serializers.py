@@ -1,6 +1,6 @@
-from Educol.models import User
+from Educol.models import *
 from django.contrib.auth.models import User
-from rest_framework import serializers
+from rest_framework import *
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -25,3 +25,17 @@ class UsuarioSerializer(serializers.ModelSerializer):
         usuario = Usuario.objects.get(user=user)
         return usuario
 
+class EventoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Evento
+        fields = ('nombre','direccion','telefono','id')
+
+class ActividadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Actividad
+        fields = ('nombre','documento','descripcion','id')
+
+class UsuarioEventoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UsuarioEvento
+        fields = ('usuario','evento','asistencia','id')
