@@ -13,6 +13,8 @@ class Usuario(models.Model):
 class Evento(models.Model):
     nombre = models.CharField(max_length=100)
     direccion = models.CharField(max_length=100)
+    descripcion = models.TextField(null = True, blank = True)
+    imagen = models.ImageField(upload_to='img/fotosapp/', blank=True, null=True)
     telefono = models.IntegerField()
 
 class Actividad(models.Model):

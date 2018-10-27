@@ -14,9 +14,17 @@
 
 
 <ion-content padding>
-    <ion-list inset>
-      <ion-item *ngFor="let evento of eventos">
-        <h2>{{evento.nombre}}</h2>
-        </ion-item>
-        </ion-list>
+  <ion-list inset>
+    <ion-item *ngFor="let evento of eventos">
+      <ion-card>
+        <img src="img/nin-live.png" />
+        <ion-card-content>
+          <ion-card-title>
+            {{ evento.nombre }}
+          </ion-card-title>
+          <p>{{ evento.descripcion }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>

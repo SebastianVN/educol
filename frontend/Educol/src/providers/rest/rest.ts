@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RestProvider {
 
-  apiUrl = 'http://1ce53c09.ngrok.io/';
+  apiUrl = 'http://7139680f.ngrok.io/';
   loginService = 'api/login/';
   apiEvento = 'evento/'
   apiUsuarios = 'usuarios/';

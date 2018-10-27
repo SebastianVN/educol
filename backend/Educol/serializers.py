@@ -1,6 +1,7 @@
 from Educol.models import *
 from django.contrib.auth.models import User
 from rest_framework import *
+from drf_extra_fields.fields import Base64ImageField
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -26,9 +27,10 @@ class UsuarioSerializer(serializers.ModelSerializer):
         return usuario
 
 class EventoSerializer(serializers.ModelSerializer):
+    imagen = Base64ImageField()
     class Meta:
         model = Evento
-        fields = ('nombre','direccion','telefono','id')
+        fields = ('nombre','direccion','telefono','id','descripcion','imagen')
 
 class ActividadSerializer(serializers.ModelSerializer):
     class Meta:

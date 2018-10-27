@@ -151,3 +151,6 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
+#Para guardar imagenes en la base de datos
+MEDIA_ROOT = 'E:\\Repositorios\\test\\miproyecto\\media'
+MEDIA_URL = '/media/'
